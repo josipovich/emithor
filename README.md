@@ -1,9 +1,9 @@
 # Emithor 📡
 
-[![NPM version](https://img.shields.io/npm/v/emithor.svg?style=flat-square)](https://www.npmjs.com/package/emithor)
+[![NPM version](https://img.shields.io/npm/v/emithor.svg)](https://www.npmjs.com/package/emithor)
 [![Build Status](https://travis-ci.com/josipovich/emithor.svg?token=FZzGMXwSK6fEdEg1qhdj&branch=master)](https://travis-ci.com/josipovich/emithor)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/emithor.svg)
-[![codecov](https://codecov.io/gh/josipovich/emithor/branch/master/graph/badge.svg?token=yS2VUKbPBw)](https://codecov.io/gh/josipovich/emithor)
+![Codecov](https://img.shields.io/codecov/c/github/josipovich/emithor.svg)
 
 Simple pub-sub JavaScript implementation. 
 
