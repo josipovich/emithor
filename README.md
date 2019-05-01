@@ -14,16 +14,14 @@ Simple pub-sub JavaScript implementation.
 - Firing specific callbacks only once
 - Removing events and specific callbacks
 
-<!-- 
 ## Install
 
 ```sh
 $ npm install emithor
+
 // or 
 $ yarn add emithor
 ```
-
--->
 
 ## Basic usage
 
