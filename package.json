@@ -1,0 +1,69 @@
+{
+  "name": "emithor",
+  "version": "0.0.3",
+  "description": "Simple Event Machine for JS",
+  "license": "MIT",
+  "repository": "josipovich/emithor",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Vedran Josipovic",
+    "email": "dropsaccs@gmail.com",
+    "url": "https://github.com/josipovich"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage",
+    "postcoverage": "opn coverage/lcov-report/index.html",
+    "lint": "eslint .",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "babel src -d dist",
+    "preversion": "npm run lint && npm test && npm run build",
+    "version": "standard-changelog && git add CHANGELOG.md",
+    "postpublish": "git push origin master --follow-tags"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "Events",
+    "Event Machine",
+    "Pubsub"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "7.4.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.4",
+    "@babel/plugin-proposal-class-properties": "7.3.4",
+    "@babel/preset-env": "7.3.4",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.1.0",
+    "eslint": "5.15.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "husky": "1.3.1",
+    "jest": "24.1.0",
+    "lint-staged": "8.1.5",
+    "opn-cli": "4.0.0",
+    "prettier": "1.16.4",
+    "rimraf": "2.6.3",
+    "standard-changelog": "2.0.7"
+  }
+}

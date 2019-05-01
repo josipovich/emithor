@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Emithor on method should not register callback if that callback already exist 1`] = `
+Array [
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1",
+  },
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event2",
+  },
+]
+`;
+
+exports[`Emithor on method should register events and callbacks 1`] = `
+Array [
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1",
+  },
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1.event2",
+  },
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1.event2.event3",
+  },
+]
+`;
+
+exports[`Emithor on method should register multiple callbacks on same event 1`] = `
+Array [
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1",
+  },
+]
+`;
+
+exports[`Emithor remove method should not remove anything if specified event don't exist 1`] = `
+Array [
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1",
+  },
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": null,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event2",
+  },
+]
+`;
+
+exports[`Emithor remove method should remove specific callbacks 1`] = `
+Array [
+  Object {
+    "cbs": Array [
+      Object {
+        "ctx": true,
+        "fn": [MockFunction],
+        "once": false,
+      },
+    ],
+    "name": "event1",
+  },
+]
+`;
