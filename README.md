@@ -18,7 +18,6 @@ Simple pub-sub JavaScript implementation.
 
 ```sh
 $ npm install emithor
-
 // or 
 $ yarn add emithor
 ```
