@@ -1,10 +1,9 @@
-// Private-like symbols for members
+const events = Symbol()
 const addEvent = Symbol()
 const deleteEvent = Symbol()
 const getEvent = Symbol()
 const addCallback = Symbol()
 const deleteCallback = Symbol()
-const events = Symbol()
 
 /**
  * Class representation of pub-sub
@@ -135,7 +134,7 @@ class Emithor {
    * @param {string} eventName
    */
   [deleteEvent] = eventName => {
-    this[events] = [...this[events]].filter(event => event.name !== eventName)
+    this[events] = this[events].filter(event => event.name !== eventName)
   };
 
   /**
@@ -147,7 +146,7 @@ class Emithor {
    * @param {function} callback
    */
   [addCallback] = (eventName, callback) => {
-    this[events] = [...this[events]].map(e => {
+    this[events] = this[events].map(e => {
       if (e.name === eventName) {
         e.cbs = [...e.cbs, callback]
       }
@@ -167,9 +166,9 @@ class Emithor {
    * @param {function} callback
    */
   [deleteCallback] = (eventName, callback) => {
-    this[events] = [...this[events]].map(event => {
+    this[events] = this[events].map(event => {
       if (event.name === eventName) {
-        event.cbs = [...event.cbs].filter(cb => cb.fn !== callback)
+        event.cbs = event.cbs.filter(cb => cb.fn !== callback)
       }
       return event
     })
